@@ -16,6 +16,13 @@ pytest = "^8.3.2"
 pytest-asyncio = "^0.23.8"
 pre-commit = "^3.8.0"
 
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = [
+  "--strict-config",
+  "--strict-markers",
+  "--ignore=docs_src",
+]
 
 [build-system]
 requires = ["poetry-core"]
